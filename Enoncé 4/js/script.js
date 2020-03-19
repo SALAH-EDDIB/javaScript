@@ -105,6 +105,8 @@ function blackjackdeal() {
         document.querySelector('.blackjack-result').textContent = "Let's play"
         document.querySelector('.blackjack-result').style.color = 'white'
 
+        document.querySelector('#blackjack-stand-button').addEventListener('click', dealerLogique)
+
     }
 
 }
@@ -149,9 +151,13 @@ function sleep(ms) {
 
 async function dealerLogique() {
 
+
+
     if (blackjackgame['turnsStart'] === true) {
 
         if (blackjackgame['turnsOver'] === false) {
+
+            document.querySelector('#blackjack-stand-button').removeEventListener('click', dealerLogique)
 
             blackjackgame['itStand'] = true;
 
@@ -167,6 +173,9 @@ async function dealerLogique() {
 
             blackjackgame['turnsOver'] = true;
             showresult(computeWinner())
+
+
+
 
         }
     }
