@@ -12,6 +12,7 @@ for (let y = 0; y < favoriteBooks.length; y++) {
     pval = pval + favoriteBooks[y] + "<br>" + "<br>";
 
 }
+
 document.querySelector('.para').innerHTML = pval;
 
 
@@ -71,22 +72,5 @@ function movieschanges() {
     bodybackground.style.backgroundImage = 'url(../img/film.jpg)';
     textH.innerHTML = 'ADD YOUR movie BOOK';
 
-
-}
-
-
-
-
-
-
-
-
-let number = [1, 2, 3, 4, 5]
-
-function addnumber(arr, item) {
-    arr.push(item)
-    console.log('deleted ithem  :' + arr[0])
-    arr.shift()
-    console.log(arr)
 
 }
